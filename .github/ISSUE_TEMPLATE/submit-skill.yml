@@ -1,0 +1,40 @@
+name: Submit a skill
+description: Propose a new SKILL.md for the registry (or open a PR directly — see CONTRIBUTING.md)
+title: "[Skill] "
+labels: [skill-submission]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A PR against `skills/<your-skill-name>/SKILL.md` is usually faster
+        than an issue — see [CONTRIBUTING.md](../../CONTRIBUTING.md). Use
+        this if you want feedback on the idea before writing the whole
+        thing.
+  - type: input
+    id: name
+    attributes:
+      label: Proposed skill name
+      placeholder: cohort-analysis
+    validations:
+      required: true
+  - type: textarea
+    id: when-to-use
+    attributes:
+      label: What question or task is this for?
+      description: The kind of question someone would actually ask that this should help answer.
+    validations:
+      required: true
+  - type: textarea
+    id: mistakes
+    attributes:
+      label: What specific mistakes does this skill help avoid?
+      description: See CONTRIBUTING.md's "what makes a good skill" section — general advice doesn't retrieve any better than the model already reasons on its own.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirm
+      options:
+        - label: This skill contains no executable code (no .py/.sh/.ps1/etc. files) — only a SKILL.md with illustrative snippets.
+          required: true
