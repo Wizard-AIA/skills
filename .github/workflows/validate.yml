@@ -1,4 +1,4 @@
-name: Validate skills
+name: Validate Skills and Registry
 
 on:
   push:
@@ -13,12 +13,17 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@d9d81d283c746e50ec0949d21c32d962fb418a09  # v5.3.0
         with:
           python-version: "3.12"
 
       - name: Validate skill format and executable-file rule
-        run: python .github/scripts/validate_skills.py
+        run: python3 .github/scripts/validate_skills.py
+
+      - name: Verify registry.json is up-to-date
+        run: |
+          python3 .github/scripts/build_registry.py
+          git diff --exit-code registry.json || (echo "error: registry.json is out of date. Run python3 .github/scripts/build_registry.py and commit." && exit 1)

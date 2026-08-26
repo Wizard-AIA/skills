@@ -1,0 +1,60 @@
+{
+  "cohort-analysis": {
+    "name": "cohort-analysis",
+    "description": "Defining cohorts correctly and computing retention, churn or lifetime value across them",
+    "tags": [
+      "cohorts",
+      "retention",
+      "churn",
+      "ltv",
+      "time-series"
+    ],
+    "version": "1.0",
+    "chars": 3273,
+    "words": 508,
+    "path": "skills/cohort-analysis"
+  },
+  "data-quality-triage": {
+    "name": "data-quality-triage",
+    "description": "What to establish about a table before trusting any aggregate computed from it",
+    "tags": [
+      "quality",
+      "aggregation",
+      "joins",
+      "nulls"
+    ],
+    "version": "1.0",
+    "chars": 2676,
+    "words": 411,
+    "path": "skills/data-quality-triage"
+  },
+  "outlier-detection": {
+    "name": "outlier-detection",
+    "description": "Choosing a detection method that matches the data's actual distribution, and deciding what to do with a flagged point",
+    "tags": [
+      "outliers",
+      "anomaly-detection",
+      "statistics",
+      "data-quality"
+    ],
+    "version": "1.0",
+    "chars": 3171,
+    "words": 516,
+    "path": "skills/outlier-detection"
+  },
+  "time-series-forecasting": {
+    "name": "time-series-forecasting",
+    "description": "Principles for time-series decomposition, seasonality modeling, baseline benchmarking, and out-of-sample validation",
+    "tags": [
+      "time-series",
+      "forecasting",
+      "trend",
+      "seasonality",
+      "statsmodels"
+    ],
+    "version": "1.0",
+    "chars": 2570,
+    "words": 320,
+    "path": "skills/time-series-forecasting"
+  }
+}
